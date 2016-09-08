@@ -6,8 +6,10 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player1</sprite>
-    <sprite>sprites\spr_player2</sprite>
+    <sprite>sprites\spr_player1H</sprite>
+    <sprite>sprites\spr_player2G</sprite>
+    <sprite>sprites\spr_player2H</sprite>
+    <sprite>sprites\spr_player1G</sprite>
     <sprite>sprites\spr_player3</sprite>
     <sprite>sprites\spr_player4</sprite>
     <sprite>sprites\spr_coins</sprite>
@@ -27,6 +29,7 @@
     <object>objects\obj_heroattack</object>
     <objects name="players 1.2">
       <object>objects\obj_player1state</object>
+      <object>objects\obj_player2state</object>
     </objects>
     <object>objects\obj_bullet</object>
     <objects name="players">
@@ -39,8 +42,8 @@
     <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_statetests</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
