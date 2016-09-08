@@ -1,4 +1,4 @@
-#define GenericGoon
+#define scr_GenericGoon
 ///initialise variables
 hspeed = 0;
 vspeed = 0;

@@ -14,16 +14,20 @@
     <sprite>sprites\spr_heroattack</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_hero.gml</script>
-    <script>scripts\GenericGoon.gml</script>
+    <script>scripts\scr_GenericGoon.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_coins</object>
     <object>objects\obj_heroattack</object>
+    <objects name="players 1.2">
+      <object>objects\obj_player1state</object>
+    </objects>
     <object>objects\obj_bullet</object>
     <objects name="players">
       <object>objects\obj_player3</object>
@@ -32,9 +36,11 @@
       <object>objects\obj_player1</object>
     </objects>
     <object>objects\obj_manager</object>
+    <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
+    <room>rooms\rm_statetests</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

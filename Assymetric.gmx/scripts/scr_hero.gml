@@ -52,7 +52,7 @@ if (place_meeting(x,y+vspeed,obj_wall))
 }
 
 y += vspeed;
-//melee sprite
+//die
 if (place_meeting(x,y+vspeed,obj_bullet))
 {
     instance_destroy()
