@@ -44,7 +44,7 @@ if (place_meeting(x+hspeed,y,obj_wall))
     }
     hspeed = 0;
 }
-x += hsp;
+x += hspeed;
 
 // verticle collision
 if (place_meeting(x,y+vspeed,obj_wall))

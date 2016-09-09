@@ -31,18 +31,18 @@ global.bluecoins = 0;
 global.greencoins = 0;
 global.orangecoins = 0;
 global.redcoins = 0;
-
+global.State = states.hero1;
 starttimer = 3;
 
 firstPlayer = random_range(1,2);
 
 if (firstPlayer == 1)
 {
-    state = state.hero1
+   global.State = states.hero1
 }
 else
 {
-    state = state.hero2
+    global.State = states.hero2
 }
 
 </string>

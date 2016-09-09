@@ -27,26 +27,51 @@
             <kind>1</kind>
             <string>//assigne controller
 cont = 1;
-
-/*//state?
+start = 0;
+alarm[0] = 60;
+current_state = global.State;
+/*
+//state?
 switch (state)
 {
-    case state.hero1: scr_GenericGoon(); break;
-    case state.hero2: scr_hero(); break;
+    case state.hero1: scr_hero(); break;
+    case state.hero2: scr_GenericGoon(); break;
 }
 
 //pick sprite
-if (state == hero2){
-    sprite_index = spr_player2H;
-    image_xscale = 1
-    image_yscale = 1
+if (state == hero1){
+    sprite_index = spr_player1H;
 }
 else{
-    sprite_index = spr_player2G
+    sprite_index = spr_player1G
     image_xscale = 0.5
     image_yscale = 0.5
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///start
+start = 1;
 </string>
           </argument>
         </arguments>
@@ -69,23 +94,26 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//state?
-switch (state)
+            <string>///change state
+if (start = 1)
 {
-    case state.hero1: scr_GenericGoon(); break;
-    case state.hero2: scr_hero(); break;
+switch (current_state)
+{
+    case states.hero1: scr_GenericGoon(); break;
+    case states.hero2: scr_hero(); break;
 }
 
 //pick sprite
-if (state == hero2){
+if (current_state == states.hero2){
     sprite_index = spr_player2H;
-     image_xscale = 1
-    image_yscale = 1
+    image_xscale = 1;
+    image_yscale = 1;
 }
 else{
-    sprite_index = spr_player2G
-    image_xscale = 0.5
-    image_yscale = 0.5
+    sprite_index = spr_player2G;
+    image_xscale = 0.5;
+    image_yscale = 0.5;
+}
 }
 </string>
           </argument>
