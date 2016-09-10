@@ -9,14 +9,18 @@
     <sprite>sprites\spr_player1H</sprite>
     <sprite>sprites\spr_player2G</sprite>
     <sprite>sprites\spr_player2H</sprite>
+    <sprite>sprites\spr_player3H</sprite>
+    <sprite>sprites\spr_player4H</sprite>
     <sprite>sprites\spr_player1G</sprite>
-    <sprite>sprites\spr_player3</sprite>
-    <sprite>sprites\spr_player4</sprite>
+    <sprite>sprites\spr_player3G</sprite>
+    <sprite>sprites\spr_player4G</sprite>
     <sprite>sprites\spr_coins</sprite>
     <sprite>sprites\spr_heroattack</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\spr_bullet2</sprite>
     <sprite>sprites\spr_bullet1</sprite>
+    <sprite>sprites\spr_bullet3</sprite>
+    <sprite>sprites\spr_bullet4</sprite>
     <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -25,15 +29,22 @@
     <script>scripts\scr_hero.gml</script>
     <script>scripts\scr_GenericGoon.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_birlin</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_coins</object>
     <object>objects\obj_heroattack</object>
     <objects name="players 1.2">
       <object>objects\obj_player1state</object>
       <object>objects\obj_player2state</object>
+      <object>objects\obj_player3state</object>
+      <object>objects\obj_player4state</object>
     </objects>
     <object>objects\obj_bullet1</object>
     <object>objects\obj_bullet2</object>
+    <object>objects\obj_bullet3</object>
+    <object>objects\obj_bullet4</object>
     <objects name="players">
       <object>objects\obj_player3</object>
       <object>objects\obj_player4</object>

@@ -65,8 +65,6 @@ if (place_meeting(x+hspeed,y,obj_heroattack))
 
 ///shooting
 
-///bullet
-
 //initialise variables/states
 gamepad_set_axis_deadzone(cont,0.2);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
@@ -74,7 +72,7 @@ var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 haxis = gamepad_axis_value(cont, gp_axisrh);
 vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
-bulletspeed = 10;
+bulletspeed = 50;
 shotcooldown = 0
 //shoot a bullet
 
@@ -84,7 +82,7 @@ action_create_object_motion(bullet,x,y,bulletspeed,bulletdirection);
 //facebullet
 image_angle = bulletdirection;
 //time between shots
-shotcooldown = 10;
+shotcooldown = 50;
 };
 
 //cooldowntimer

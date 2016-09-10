@@ -3,7 +3,7 @@
 hspeed = 0;
 vspeed = 0;
 jumpspeed = 7;
-movespeed = 10;
+movespeed = 5;
 
 Health = 100;
 
@@ -62,6 +62,16 @@ if (place_meeting(x,y+vspeed,obj_bullet2))
     global.State = states.hero2
     instance_destroy()
 }
+if (place_meeting(x,y+vspeed,obj_bullet3))
+{
+    global.State = states.hero3
+    instance_destroy()
+}
+if (place_meeting(x,y+vspeed,obj_bullet4))
+{
+    global.State = states.hero4
+    instance_destroy()
+}
 
 ///attacke
 ///melee attack
@@ -75,17 +85,17 @@ if (place_meeting(x,y+vspeed,obj_bullet2))
 */
 
 //initialise variables/states
-gamepad_set_axis_deadzone(1,0.4);
+gamepad_set_axis_deadzone(cont,0.4);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 //define variables
-haxis = gamepad_axis_value(1, gp_axisrh);
-vaxis = gamepad_axis_value(1, gp_axisrv);
+haxis = gamepad_axis_value(cont, gp_axisrh);
+vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 bulletspeed = 10;
 shotcooldown = 0;
 //shoot a bullet
 
-if (gamepad_button_check_pressed(1, gp_face1) && (shotcooldown <= 0))then{
+if (gamepad_button_check_pressed(cont, gp_face1) && (shotcooldown <= 0))then{
 action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
 }
 

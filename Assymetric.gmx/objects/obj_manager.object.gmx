@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///initiate variables.
-
+randomize();
+draw_set_font(fnt_birlin);
+draw_set_halign(fa_center);
 global.bluecoins = 0;
 global.greencoins = 0;
 global.orangecoins = 0;
@@ -35,16 +37,23 @@ global.State = states.hero1;
 
 starttimer = 3;
 
-firstPlayer = random_range(0,2);
+firstPlayer = random_range(0,3);
 
-global.State = states.hero1
-/*if (firstPlayer == 1)
+if (firstPlayer == 1)
 {
    global.State = states.hero1
 }
+if (firstPlayer == 2)
+{
+   global.State = states.hero2
+}
+if (firstPlayer == 3)
+{
+   global.State = states.hero3
+}
 else
 {
-    global.State = states.hero2
+    global.State = states.hero4
 }
 
 </string>
@@ -70,7 +79,9 @@ else
           <argument>
             <kind>1</kind>
             <string>///add ui for scoring
+//initialize variables
 
+draw_text_colour(800,96, 'Player 1:' + string(global.bluecoins) + '   Player 2:' + string(global.greencoins) + '   Player 3:' + string(global.orangecoins) + '   Player 4:' + string(global.redcoins), c_white,c_white,c_white,c_white,1)
 </string>
           </argument>
         </arguments>
@@ -99,6 +110,21 @@ if (instance_number(obj_player1state) &lt; 1)
 if (instance_number(obj_player2state) &lt; 1)
 {
     instance_create (1504,800, obj_player2state)
+}
+if (instance_number(obj_player3state) &lt; 1)
+{
+    instance_create (1504,96, obj_player3state)
+}
+if (instance_number(obj_player4state) &lt; 1)
+{
+    instance_create (96,800, obj_player4state)
+}
+
+if (instance_number (obj_coins) &lt; 20)
+{
+    xran = random_range(20,1580);
+    yran = random_range(20,880);
+    instance_create(xran,yran, obj_coins)
 }
 
 </string>

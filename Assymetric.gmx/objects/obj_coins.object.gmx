@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///size
+
+
 image_xscale = 0.5
 image_yscale = 0.5
 
@@ -37,7 +39,7 @@ image_angle = rot;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player1">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -54,12 +56,45 @@ image_angle = rot;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///scoring
-with (obj_player1){
-    coins += 1
+            <string>///determine state, add points, destroy
+//player1
+if (global.State == states.hero1)
+{
+    if (place_meeting (x,y, obj_player1state))
+    {
+        global.bluecoins += 1
+        instance_destroy();
     }
+}
 
-instance_destroy()
+//player2
+if (global.State == states.hero2)
+{
+    if (place_meeting (x,y, obj_player2state))
+    {
+        global.greencoins += 1
+        instance_destroy();
+    }
+}
+//player3
+if (global.State == states.hero3)
+{
+    if (place_meeting (x,y, obj_player3state))
+    {
+        global.orangecoins += 1
+        instance_destroy();
+    }
+}
+
+//player 4
+if (global.State == states.hero4)
+{
+    if (place_meeting (x,y, obj_player4state))
+    {
+        global.redcoins += 1
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>
