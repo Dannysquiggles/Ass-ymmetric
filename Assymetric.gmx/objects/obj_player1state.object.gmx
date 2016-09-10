@@ -71,6 +71,7 @@ else{
           <argument>
             <kind>1</kind>
             <string>///change state
+current_state = global.State;
 {
 switch (current_state)
 {

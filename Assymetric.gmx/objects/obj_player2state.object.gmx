@@ -96,6 +96,7 @@ start = 1;
           <argument>
             <kind>1</kind>
             <string>///change state
+current_state = global.State;
 if (start = 1)
 {
 switch (current_state)

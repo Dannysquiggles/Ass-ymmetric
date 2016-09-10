@@ -71,8 +71,8 @@ if (place_meeting(x+hspeed,y,obj_heroattack))
 gamepad_set_axis_deadzone(cont,0.2);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 //define variables
-haxis = gamepad_axis_value(cont, gp_axislh);
-vaxis = gamepad_axis_value(cont, gp_axislv);
+haxis = gamepad_axis_value(cont, gp_axisrh);
+vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 bulletspeed = 10;
 shotcooldown = 0
