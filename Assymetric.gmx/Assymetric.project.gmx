@@ -27,6 +27,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_hero.gml</script>
+    <script>scripts\scr_player_timeup.gml</script>
     <script>scripts\scr_GenericGoon.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -51,6 +52,7 @@
       <object>objects\obj_player2</object>
       <object>objects\obj_player1</object>
     </objects>
+    <object>objects\obj_timer</object>
     <object>objects\obj_manager</object>
     <object>objects\obj_wall</object>
   </objects>

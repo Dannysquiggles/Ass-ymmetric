@@ -63,6 +63,7 @@ switch (current_state)
     case states.hero2: scr_GenericGoon(); break;
     case states.hero3: scr_GenericGoon(); break;
     case states.hero4: scr_GenericGoon(); break;
+    case states.timeup: scr_player_timeup(); break;
 }
 
 //pick sprite

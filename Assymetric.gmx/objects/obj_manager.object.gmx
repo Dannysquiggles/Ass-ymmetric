@@ -35,6 +35,8 @@ global.orangecoins = 0;
 global.redcoins = 0;
 global.State = states.hero1;
 
+global.winner = 'none';
+
 starttimer = 3;
 
 firstPlayer = random_range(0,3);
@@ -78,14 +80,58 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///add ui for scoring
-//initialize variables
+            <string>///respawning.
+if (global.State == states.timeup)
+{
+    if (global.bluecoins &gt; global.redcoins &amp;&amp; global.bluecoins &gt; global.greencoins &amp;&amp; global.bluecoins &gt; global.orangecoins)
+    {
+        global.winner = 'Blue'
+    }
+    else if (global.redcoins &gt; global.bluecoins &amp;&amp; global.redcoins &gt; global.greencoins &amp;&amp; global.redcoins &gt; global.orangecoins)
+    {
+        global.winner = 'Red'
+    }
+    else if (global.greencoins &gt; global.bluecoins &amp;&amp; global.greencoins &gt; global.redcoins &amp;&amp; global.greencoins &gt; global.orangecoins)
+    {
+        global.winner = 'Green'
+    }
+    else
+    {
+        global.winner = 'Orange'
+    }
+}
+else
+{
+    if (instance_number(obj_player1state) &lt; 1)
+    {
+        instance_create (96,96, obj_player1state)
+    }
+    if (instance_number(obj_player2state) &lt; 1)
+    {
+        instance_create (1504,800, obj_player2state)
+    }
+    if (instance_number(obj_player3state) &lt; 1)
+    {
+        instance_create (1504,96, obj_player3state)
+    }
+    if (instance_number(obj_player4state) &lt; 1)
+    {
+        instance_create (96,800, obj_player4state)
+    }
 
-draw_text_colour(800,96, 'Player 1:' + string(global.bluecoins) + '   Player 2:' + string(global.greencoins) + '   Player 3:' + string(global.orangecoins) + '   Player 4:' + string(global.redcoins), c_white,c_white,c_white,c_white,1)
+    if (instance_number (obj_coins) &lt; 20)
+    {
+        xran = random_range(20,1580);
+        yran = random_range(20,880);
+        instance_create(xran,yran, obj_coins)
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -102,31 +148,17 @@ draw_text_colour(800,96, 'Player 1:' + string(global.bluecoins) + '   Player 2:'
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///respawning.
-if (instance_number(obj_player1state) &lt; 1)
+            <string>///add ui for scoring
+//initialize variables
+if (global.State == states.timeup)
 {
-    instance_create (96,96, obj_player1state)
+draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins) + '
+The Winner is ' + string(global.winner), c_white,c_white,c_white,c_white,1)
 }
-if (instance_number(obj_player2state) &lt; 1)
+else
 {
-    instance_create (1504,800, obj_player2state)
+draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins), c_white,c_white,c_white,c_white,1)
 }
-if (instance_number(obj_player3state) &lt; 1)
-{
-    instance_create (1504,96, obj_player3state)
-}
-if (instance_number(obj_player4state) &lt; 1)
-{
-    instance_create (96,800, obj_player4state)
-}
-
-if (instance_number (obj_coins) &lt; 20)
-{
-    xran = random_range(20,1580);
-    yran = random_range(20,880);
-    instance_create(xran,yran, obj_coins)
-}
-
 </string>
           </argument>
         </arguments>
