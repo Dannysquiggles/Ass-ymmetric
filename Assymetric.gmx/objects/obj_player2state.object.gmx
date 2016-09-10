@@ -29,6 +29,7 @@
 cont = 1;
 start = 0;
 alarm[0] = 60;
+bullet = obj_bullet2;
 current_state = global.State;
 /*
 //state?

@@ -67,8 +67,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_player1.x
-y = obj_player1.y
+            <string>//x = obj_player1.x
+//y = obj_player1.y
 </string>
           </argument>
         </arguments>

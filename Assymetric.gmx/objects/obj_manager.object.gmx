@@ -32,11 +32,13 @@ global.greencoins = 0;
 global.orangecoins = 0;
 global.redcoins = 0;
 global.State = states.hero1;
+
 starttimer = 3;
 
-firstPlayer = random_range(1,2);
+firstPlayer = random_range(0,2);
 
-if (firstPlayer == 1)
+global.State = states.hero1
+/*if (firstPlayer == 1)
 {
    global.State = states.hero1
 }
@@ -68,6 +70,36 @@ else
           <argument>
             <kind>1</kind>
             <string>///add ui for scoring
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///respawning.
+if (instance_number(obj_player1state) &lt; 1)
+{
+    instance_create (96,96, obj_player1state)
+}
+if (instance_number(obj_player2state) &lt; 1)
+{
+    instance_create (1504,800, obj_player2state)
+}
 
 </string>
           </argument>

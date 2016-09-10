@@ -178,7 +178,7 @@ if (place_meeting(x,y+vspeed,obj_bullet))
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_bullet">
+    <event eventtype="4" ename="obj_bullet1">
       <action>
         <libid>1</libid>
         <id>203</id>

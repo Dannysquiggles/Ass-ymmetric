@@ -15,7 +15,8 @@
     <sprite>sprites\spr_coins</sprite>
     <sprite>sprites\spr_heroattack</sprite>
     <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_bullet2</sprite>
+    <sprite>sprites\spr_bullet1</sprite>
     <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -31,7 +32,8 @@
       <object>objects\obj_player1state</object>
       <object>objects\obj_player2state</object>
     </objects>
-    <object>objects\obj_bullet</object>
+    <object>objects\obj_bullet1</object>
+    <object>objects\obj_bullet2</object>
     <objects name="players">
       <object>objects\obj_player3</object>
       <object>objects\obj_player4</object>

@@ -9,8 +9,6 @@ Health = 100;
 
 spawn = 0;
 
-coins = 0;
-
 gamepad_set_axis_deadzone(cont,0.2);
 
 ///move and collide.
@@ -52,10 +50,43 @@ if (place_meeting(x,y+vspeed,obj_wall))
 }
 
 y += vspeed;
-//die
-if (place_meeting(x,y+vspeed,obj_bullet))
+//die & change state
+
+if (place_meeting(x,y+vspeed,obj_bullet1))
 {
+    global.State = states.hero1
     instance_destroy()
+}
+if (place_meeting(x,y+vspeed,obj_bullet2))
+{
+    global.State = states.hero2
+    instance_destroy()
+}
+
+///attacke
+///melee attack
+
+/*if ((gamepad_button_check(1, gp_face1)) && spawn = 0)
+{
+    instance_create(x,y, obj_heroattack);
+    alarm[0] = 60;
+    spawn = 1;
+}
+*/
+
+//initialise variables/states
+gamepad_set_axis_deadzone(1,0.4);
+var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
+//define variables
+haxis = gamepad_axis_value(1, gp_axisrh);
+vaxis = gamepad_axis_value(1, gp_axisrv);
+bulletdirection = point_direction(0, 0, haxis, vaxis);
+bulletspeed = 10;
+shotcooldown = 0;
+//shoot a bullet
+
+if (gamepad_button_check_pressed(1, gp_face1) && (shotcooldown <= 0))then{
+action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
 }
 
 
