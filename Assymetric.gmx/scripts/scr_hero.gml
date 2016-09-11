@@ -55,21 +55,38 @@ y += vspeed;
 if (place_meeting(x,y+vspeed,obj_bullet1))
 {
     global.State = states.hero1
+    
+    with(obj_bullet1)
+    {
+        instance_destroy()
+    }
     instance_destroy()
 }
 if (place_meeting(x,y+vspeed,obj_bullet2))
 {
     global.State = states.hero2
+    with(obj_bullet2)
+    {
+        instance_destroy()
+    }
     instance_destroy()
 }
 if (place_meeting(x,y+vspeed,obj_bullet3))
 {
     global.State = states.hero3
+    with(obj_bullet3)
+    {
+        instance_destroy()
+    }
     instance_destroy()
 }
 if (place_meeting(x,y+vspeed,obj_bullet4))
 {
     global.State = states.hero4
+    with(obj_bullet1)
+    {
+        instance_destroy()
+    }
     instance_destroy()
 }
 

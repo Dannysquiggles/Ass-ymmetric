@@ -1,4 +1,3 @@
-#define scr_GenericGoon
 ///initialise variables
 hspeed = 0;
 vspeed = 0;
@@ -73,44 +72,16 @@ haxis = gamepad_axis_value(cont, gp_axisrh);
 vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 bulletspeed = 50;
-shotcooldown = 0
+shotcooldown = 0;
 //shoot a bullet
 
-if (gamepad_button_check_pressed(cont, gp_shoulderrb) && (shotcooldown <= 0))then{
+if (gamepad_button_check_pressed(cont, gp_shoulderrb) && /*(shotcooldown <= 0)*/ (instance_number(bullet) = 0))then{
 action_create_object_motion(bullet,x,y,bulletspeed,bulletdirection);
 
 //facebullet
 image_angle = bulletdirection;
 //time between shots
-shotcooldown = 50;
-};
-
-//cooldowntimer
-if shotcooldown >= 0 then{
-shotcooldown = shotcooldown -1;
-};
-
-#define Goonshoot
-///bullet
-
-//initialise variables/states
-gamepad_set_axis_deadzone(cont,0.2);
-var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
-//define variables
-haxis = gamepad_axis_value(cont, gp_axislh);
-vaxis = gamepad_axis_value(cont, gp_axislv);
-bulletdirection = point_direction(0, 0, haxis, vaxis);
-bulletspeed = 10;
-shotcooldown = 0
-//shoot a bullet
-
-if (gamepad_button_check_pressed(cont, gp_shoulderrb) && (shotcooldown <= 0))then{
-action_create_object_motion(obj_bullet,x,y,bulletspeed,bulletdirection);
-
-//facebullet
-image_angle = bulletdirection;
-//time between shots
-shotcooldown = 10;
+shotcooldown = 500;
 };
 
 //cooldowntimer

@@ -30,7 +30,7 @@ cont = 2;
 start = 0;
 bullet = obj_bullet3;
 current_state = global.State;
-
+shotcooldown = 0;
 </string>
           </argument>
         </arguments>
