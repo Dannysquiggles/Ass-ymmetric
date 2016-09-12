@@ -4,7 +4,15 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_coin</sound>
+    <sound>sound\snd_laser</sound>
+    <sound>sound\snd_playerhit</sound>
+    <sound>sound\snd_dash_shield</sound>
+    <sound>sound\snd_shatter</sound>
+    <sound>sound\snd_timer</sound>
+    <sound>sound\snd_playerhit2</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player1H</sprite>
     <sprite>sprites\spr_player2G</sprite>
@@ -20,8 +28,13 @@
     <sprite>sprites\spr_bullet2</sprite>
     <sprite>sprites\spr_bullet1</sprite>
     <sprite>sprites\spr_bullet3</sprite>
+    <sprite>sprites\spr_prebullet2</sprite>
+    <sprite>sprites\spr_prebullet1</sprite>
+    <sprite>sprites\spr_prebullet3</sprite>
+    <sprite>sprites\spr_prebullet4</sprite>
     <sprite>sprites\spr_bullet4</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_box</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -42,6 +55,10 @@
       <object>objects\obj_player3state</object>
       <object>objects\obj_player4state</object>
     </objects>
+    <object>objects\obj_prebullet2</object>
+    <object>objects\obj_prebullet1</object>
+    <object>objects\obj_prebullet3</object>
+    <object>objects\obj_prebullet4</object>
     <object>objects\obj_bullet1</object>
     <object>objects\obj_bullet2</object>
     <object>objects\obj_bullet3</object>
@@ -55,6 +72,8 @@
     <object>objects\obj_timer</object>
     <object>objects\obj_manager</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_box</object>
+    <object>objects\obj_screenshake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_statetests</room>

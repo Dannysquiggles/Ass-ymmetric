@@ -1,9 +1,9 @@
-#define scr_hero
 ///initialise variables
 hspeed = 0;
 vspeed = 0;
 jumpspeed = 7;
 movespeed = 5;
+dashspeed = 70;
 
 Health = 100;
 
@@ -52,44 +52,41 @@ if (place_meeting(x,y+vspeed,obj_wall))
 y += vspeed;
 //die & change state
 
-if (place_meeting(x,y+vspeed,obj_bullet1))
+if (global.shield == 'false')
 {
-    global.State = states.hero1
+    if (place_meeting(x,y+vspeed,obj_bullet1))
+    {
+        global.State = states.hero1
+        instance_destroy();
     
-    with(obj_bullet1)
-    {
-        instance_destroy()
+        instance_create(x, y, obj_screenshake);
+        audio_play_sound(snd_shatter, 50, false);
     }
-    instance_destroy()
-}
-if (place_meeting(x,y+vspeed,obj_bullet2))
-{
-    global.State = states.hero2
-    with(obj_bullet2)
+    if (place_meeting(x,y+vspeed,obj_bullet2))
     {
-        instance_destroy()
+        global.State = states.hero2;
+        instance_destroy();
+    
+        instance_create(x, y, obj_screenshake);
+        audio_play_sound(snd_shatter, 50, false);
     }
-    instance_destroy()
-}
-if (place_meeting(x,y+vspeed,obj_bullet3))
-{
-    global.State = states.hero3
-    with(obj_bullet3)
+    if (place_meeting(x,y+vspeed,obj_bullet3))
     {
-        instance_destroy()
+        global.State = states.hero3;
+        instance_destroy();
+    
+        instance_create(x, y, obj_screenshake);
+        audio_play_sound(snd_shatter, 50, false);
     }
-    instance_destroy()
-}
-if (place_meeting(x,y+vspeed,obj_bullet4))
-{
-    global.State = states.hero4
-    with(obj_bullet1)
+    if (place_meeting(x,y+vspeed,obj_bullet4))
     {
-        instance_destroy()
-    }
-    instance_destroy()
+        global.State = states.hero4;
+        instance_destroy();
+    
+        instance_create(x, y, obj_screenshake);
+        audio_play_sound(snd_shatter, 50, false);
+    }   
 }
-
 ///attacke
 ///melee attack
 
@@ -108,38 +105,18 @@ var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 haxis = gamepad_axis_value(cont, gp_axisrh);
 vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
-bulletspeed = 10;
+bulletspeed = 0;
 shotcooldown = 0;
 //shoot a bullet
 
 if (gamepad_button_check_pressed(cont, gp_face1) && (shotcooldown <= 0))then{
 action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
+move = key_left + key_right;
+hspeed = move * dashspeed;
+
+moveV = key_up + key_down;
+vspeed = moveV * dashspeed;
+audio_play_sound(snd_laser, 80, false);
 }
 
 
-
-#define scr_herodam
-///melee attack
-
-/*if ((gamepad_button_check(1, gp_face1)) && spawn = 0)
-{
-    instance_create(x,y, obj_heroattack);
-    alarm[0] = 60;
-    spawn = 1;
-}
-*/
-
-//initialise variables/states
-gamepad_set_axis_deadzone(1,0.4);
-var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
-//define variables
-haxis = gamepad_axis_value(1, gp_axisrh);
-vaxis = gamepad_axis_value(1, gp_axisrv);
-bulletdirection = point_direction(0, 0, haxis, vaxis);
-bulletspeed = 10;
-shotcooldown = 0;
-//shoot a bullet
-
-if (gamepad_button_check_pressed(1, gp_face1) && (shotcooldown <= 0))then{
-action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
-}

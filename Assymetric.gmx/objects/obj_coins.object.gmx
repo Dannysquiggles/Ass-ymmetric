@@ -64,6 +64,7 @@ if (global.State == states.hero1)
     {
         global.bluecoins += 1
         instance_destroy();
+        audio_play_sound(snd_coin, 50, false);
     }
 }
 
@@ -74,6 +75,7 @@ if (global.State == states.hero2)
     {
         global.greencoins += 1
         instance_destroy();
+        audio_play_sound(snd_coin, 50, false);
     }
 }
 //player3
@@ -83,6 +85,7 @@ if (global.State == states.hero3)
     {
         global.orangecoins += 1
         instance_destroy();
+        audio_play_sound(snd_coin, 50, false);
     }
 }
 
@@ -93,6 +96,7 @@ if (global.State == states.hero4)
     {
         global.redcoins += 1
         instance_destroy();
+        audio_play_sound(snd_coin, 50, false);
     }
 }
 </string>

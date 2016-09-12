@@ -36,10 +36,10 @@ global.redcoins = 0;
 global.State = states.hero1;
 
 global.winner = 'none';
+global.shield = 'false';
 
 starttimer = 3;
-
-firstPlayer = random_range(0,3);
+/*firstPlayer = random_range(0,3);
 
 if (firstPlayer == 1)
 {
@@ -104,7 +104,7 @@ else
 {
     if (instance_number(obj_player1state) &lt; 1)
     {
-        instance_create (96,96, obj_player1state)
+        instance_create (192,192, obj_player1state)
     }
     if (instance_number(obj_player2state) &lt; 1)
     {
@@ -119,11 +119,11 @@ else
         instance_create (96,800, obj_player4state)
     }
 
-    if (instance_number (obj_coins) &lt; 20)
+    if (instance_number (obj_box) &lt; 20)
     {
         xran = random_range(20,1580);
         yran = random_range(20,880);
-        instance_create(xran,yran, obj_coins)
+        instance_create(xran,yran, obj_box)
     }
 }
 </string>

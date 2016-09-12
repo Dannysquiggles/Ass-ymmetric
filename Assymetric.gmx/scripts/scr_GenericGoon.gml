@@ -59,6 +59,7 @@ y += vspeed;
 //melee sprite
 if (place_meeting(x+hspeed,y,obj_heroattack))
 {
+    audio_play_sound(snd_shatter, 50, false);
     instance_destroy()
 }
 
@@ -71,15 +72,17 @@ var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 haxis = gamepad_axis_value(cont, gp_axisrh);
 vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
-bulletspeed = 50;
+//facebullet
+image_angle = bulletdirection;
+bulletspeed = 0;
 shotcooldown = 0;
 //shoot a bullet
 
 if (gamepad_button_check_pressed(cont, gp_shoulderrb) && /*(shotcooldown <= 0)*/ (instance_number(bullet) = 0))then{
-action_create_object_motion(bullet,x,y,bulletspeed,bulletdirection);
+action_create_object_motion(bullet,x,y,bulletspeed, bulletdirection);
 
-//facebullet
-image_angle = bulletdirection;
+
+
 //time between shots
 shotcooldown = 500;
 };
