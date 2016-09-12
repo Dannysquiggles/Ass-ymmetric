@@ -153,11 +153,11 @@ else
 if (global.State == states.timeup)
 {
 draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins) + '
-The Winner is ' + string(global.winner), c_white,c_white,c_white,c_white,1)
+The Winner is ' + string(global.winner), c_black,c_black,c_black,c_black,1)
 }
 else
 {
-draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins), c_white,c_white,c_white,c_white,1)
+draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins), c_black,c_black,c_black,c_black,1)
 }
 </string>
           </argument>

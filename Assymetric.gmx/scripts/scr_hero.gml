@@ -2,8 +2,8 @@
 hspeed = 0;
 vspeed = 0;
 jumpspeed = 7;
-movespeed = 5;
-dashspeed = 70;
+movespeed = 6.5;
+dashspeed = 110;
 
 Health = 100;
 
