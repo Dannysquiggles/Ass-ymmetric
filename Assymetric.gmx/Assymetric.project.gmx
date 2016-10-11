@@ -36,7 +36,9 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_box</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_hero.gml</script>
