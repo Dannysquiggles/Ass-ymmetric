@@ -6,7 +6,7 @@ movespeed = 3.0;
 dashspeed = 140;
 
 Health = 100;
-
+image_speed = 0.25;
 spawn = 0;
 
 gamepad_set_axis_deadzone(cont,0.2);

@@ -20,6 +20,7 @@
     <sprite>sprites\spr_player3H</sprite>
     <sprite>sprites\spr_player4H</sprite>
     <sprite>sprites\spr_player1G</sprite>
+    <sprite>sprites\spr_pointer</sprite>
     <sprite>sprites\spr_player3G</sprite>
     <sprite>sprites\spr_player4G</sprite>
     <sprite>sprites\spr_coins</sprite>
@@ -37,6 +38,10 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bk_player2</background>
+    <background>background\_bk_player3</background>
+    <background>background\bk_player4</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
