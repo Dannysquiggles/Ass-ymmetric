@@ -14,6 +14,7 @@
     <sound>sound\snd_playerhit2</sound>
     <sound>sound\snd_chargeup1</sound>
     <sound>sound\snd_ding_</sound>
+    <sound>sound\snd_chargehum</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player1H</sprite>

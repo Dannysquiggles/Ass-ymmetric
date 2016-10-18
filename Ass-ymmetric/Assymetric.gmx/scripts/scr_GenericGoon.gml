@@ -113,7 +113,10 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
     if (charge = 80)
     {
         audio_play_sound(snd_ding_, 70, false);
-        spawn2 = 1;
+    }
+    if (charge = 85)
+    {
+        audio_play_sound(snd_chargehum, 50, false);
     }
 }
 
@@ -134,6 +137,7 @@ if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxi
         action_create_object_motion(bulletID,x,y,bulletspeed, bulletdirection);
         audio_play_sound(snd_playerhit2, 100, false);
         charge = 0;
+        audio_stop_sound(snd_chargehum);
     }
 }
 

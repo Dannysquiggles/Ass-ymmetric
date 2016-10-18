@@ -23,6 +23,8 @@ key_down = (gamepad_axis_value(cont,gp_axislv) > 0);
 move = key_left + key_right;
 hspeed = move * movespeed;
 
+instance_create(x, y, obj_heroattack);
+
 moveV = key_up + key_down;
 vspeed = moveV * movespeed;
 
