@@ -29,6 +29,11 @@
 time  = 80;
 
 alarm[0] = 60;
+
+draw_set_font(fnt_pixelB);
+draw_set_halign(fa_center);
+draw_set_colour(c_red);
+
 </string>
           </argument>
         </arguments>
@@ -96,11 +101,12 @@ alarm[0] = 60;
             <string>///draw timer
 if (global.State == states.timeup)
 {
-draw_text(800, 48, "Time's up")
+draw_text_transformed(room_width / 2, 48, "Time's up", 1,1,0)
+
 }
 else
 {
-    draw_text(800, 48, string(time))
+    draw_text_transformed(room_width / 2, 48, string(time),1,1,0)
 }
 </string>
           </argument>

@@ -51,6 +51,8 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_birlin</font>
+    <font>fonts\fnt_pixel</font>
+    <font>fonts\fnt_pixelB</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_coins</object>

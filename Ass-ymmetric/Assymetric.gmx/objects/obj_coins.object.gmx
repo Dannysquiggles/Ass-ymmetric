@@ -62,7 +62,7 @@ if (global.State == states.hero1)
 {
     if (place_meeting (x,y, obj_player1state))
     {
-        global.bluecoins += 1
+        global.bluecoins += 1;
         instance_destroy();
         audio_play_sound(snd_coin, 50, false);
     }
@@ -73,7 +73,7 @@ if (global.State == states.hero2)
 {
     if (place_meeting (x,y, obj_player2state))
     {
-        global.greencoins += 1
+        global.greencoins += 1;
         instance_destroy();
         audio_play_sound(snd_coin, 50, false);
     }
@@ -83,7 +83,7 @@ if (global.State == states.hero3)
 {
     if (place_meeting (x,y, obj_player3state))
     {
-        global.orangecoins += 1
+        global.purplecoins += 1;
         instance_destroy();
         audio_play_sound(snd_coin, 50, false);
     }
@@ -94,7 +94,7 @@ if (global.State == states.hero4)
 {
     if (place_meeting (x,y, obj_player4state))
     {
-        global.redcoins += 1
+        global.yellowcoins += 1;
         instance_destroy();
         audio_play_sound(snd_coin, 50, false);
     }

@@ -27,8 +27,12 @@
             <kind>1</kind>
             <string>///initiate variables.
 randomize();
-draw_set_font(fnt_birlin);
+draw_set_font(fnt_pixel);
 draw_set_halign(fa_center);
+blue = make_colour_rgb(0,230,254);
+green = make_colour_rgb(3,255,0);
+yellow = make_colour_rgb(251,255,0);
+purple = make_colour_rgb(255,0,196);
 
 myWidth = room_width;
 myHieght = room_height;
@@ -40,8 +44,8 @@ view_wport[0] = myWidth;
 
 global.bluecoins = 0;
 global.greencoins = 0;
-global.orangecoins = 0;
-global.redcoins = 0;
+global.purplecoins = 0;
+global.yellowcoins = 0;
 global.State = states.hero1;
 
 global.winner = 'none';
@@ -92,21 +96,25 @@ else
             <string>///respawning.
 if (global.State == states.timeup)
 {
-    if (global.bluecoins &gt; global.redcoins &amp;&amp; global.bluecoins &gt; global.greencoins &amp;&amp; global.bluecoins &gt; global.orangecoins)
+    if (global.bluecoins &gt; global.purplecoins &amp;&amp; global.bluecoins &gt; global.greencoins &amp;&amp; global.bluecoins &gt; global.yellowcoins)
     {
         global.winner = 'Blue'
+        col = blue;
     }
-    else if (global.redcoins &gt; global.bluecoins &amp;&amp; global.redcoins &gt; global.greencoins &amp;&amp; global.redcoins &gt; global.orangecoins)
+    else if (global.purplecoins &gt; global.bluecoins &amp;&amp; global.purplecoins &gt; global.greencoins &amp;&amp; global.purplecoins &gt; global.yellowcoins)
     {
-        global.winner = 'Red'
+        global.winner = 'Purple'
+        col = purple;
     }
-    else if (global.greencoins &gt; global.bluecoins &amp;&amp; global.greencoins &gt; global.redcoins &amp;&amp; global.greencoins &gt; global.orangecoins)
+    else if (global.greencoins &gt; global.bluecoins &amp;&amp; global.greencoins &gt; global.purplecoins &amp;&amp; global.greencoins &gt; global.yellowcoins)
     {
         global.winner = 'Green'
+        col = green;
     }
     else
     {
-        global.winner = 'Orange'
+        global.winner = 'Yellow'
+        col = yellow;
     }
 }
 else
@@ -161,13 +169,16 @@ else
 //initialize variables
 if (global.State == states.timeup)
 {
-draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins) + '
-The Winner is ' + string(global.winner), c_black,c_black,c_black,c_black,1)
+draw_text_colour(myWidth / 2, myHieght / 2, string(global.winner) + ' Wins', col,col,col,col,1)
 }
 else
 {
-draw_text_colour(800,96, 'Player 1:  ' + string(global.bluecoins) + '       Player 2:  ' + string(global.greencoins) + '    Player 3:  ' + string(global.orangecoins) + '       Player 4:  ' + string(global.redcoins), c_black,c_black,c_black,c_black,1)
+draw_text_colour(200,60, '' + string(global.bluecoins),blue ,blue,blue,blue,1)
+draw_text_colour(myWidth - 150,60, '' + string(global.greencoins),green ,green,green,green,1)
+draw_text_colour(200 ,myHieght - 155, '' + string(global.purplecoins),purple ,purple,purple,purple,1)
+draw_text_colour(myWidth - 150, myHieght - 155, '' + string(global.yellowcoins),yellow ,yellow,yellow,yellow,1)
 }
+
 </string>
           </argument>
         </arguments>
