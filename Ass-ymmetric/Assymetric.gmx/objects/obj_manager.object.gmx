@@ -122,18 +122,22 @@ else
     if (instance_number(obj_player1state) &lt; 1)
     {
         instance_create (200,200, obj_player1state)
+        instance_create (200,200, obj_p1pointer)
     }
     if (instance_number(obj_player2state) &lt; 1)
     {
         instance_create (myWidth - 200, 200, obj_player2state)
+        instance_create (200,200, obj_p2pointer)
     }
     if (instance_number(obj_player3state) &lt; 1)
     {
         instance_create (200,myHieght - 200, obj_player3state)
+        instance_create (200,200, obj_p3pointer)
     }
     if (instance_number(obj_player4state) &lt; 1)
     {
         instance_create (myWidth- 200,myHieght - 200, obj_player4state)
+        instance_create (200,200, obj_p4pointer)
     }
 
     if (instance_number (obj_box) &lt; 20)

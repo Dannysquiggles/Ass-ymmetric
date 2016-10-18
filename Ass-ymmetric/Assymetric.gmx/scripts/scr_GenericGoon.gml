@@ -4,9 +4,6 @@ vspeed = 0;
 jumpspeed = 7;
 movespeed = 2;
 
-image_xscale = 0.5;
-image_yscale = 0.5;
-
 Health = 50;
 spawn = 0;
 spawn2 = 0;

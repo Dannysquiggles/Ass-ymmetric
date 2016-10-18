@@ -50,6 +50,7 @@
   <scripts name="scripts">
     <script>scripts\scr_hero.gml</script>
     <script>scripts\scr_player_timeup.gml</script>
+    <script>scripts\scr_pointer.gml</script>
     <script>scripts\scr_GenericGoon.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -64,6 +65,10 @@
       <object>objects\obj_player1state</object>
       <object>objects\obj_player2state</object>
       <object>objects\obj_player3state</object>
+      <object>objects\obj_p1pointer</object>
+      <object>objects\obj_p2pointer</object>
+      <object>objects\obj_p3pointer</object>
+      <object>objects\obj_p4pointer</object>
       <object>objects\obj_player4state</object>
     </objects>
     <object>objects\obj_prebullet1</object>
