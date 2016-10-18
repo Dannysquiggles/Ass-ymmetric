@@ -29,6 +29,13 @@
 randomize();
 draw_set_font(fnt_birlin);
 draw_set_halign(fa_center);
+
+myWidth = display_get_width();
+myHieght = display_get_height();
+
+view_hview[0] = myHieght;
+view_wview[0] = myWidth;
+
 global.bluecoins = 0;
 global.greencoins = 0;
 global.orangecoins = 0;
@@ -39,7 +46,7 @@ global.winner = 'none';
 global.shield = 'false';
 
 starttimer = 3;
-/*firstPlayer = random_range(0,3);
+firstPlayer = random_range(0,3);
 
 if (firstPlayer == 1)
 {
@@ -104,25 +111,25 @@ else
 {
     if (instance_number(obj_player1state) &lt; 1)
     {
-        instance_create (192,192, obj_player1state)
+        instance_create (200,200, obj_player1state)
     }
     if (instance_number(obj_player2state) &lt; 1)
     {
-        instance_create (1504,800, obj_player2state)
+        instance_create (myWidth - 200, 200, obj_player2state)
     }
     if (instance_number(obj_player3state) &lt; 1)
     {
-        instance_create (1504,96, obj_player3state)
+        instance_create (200,myHieght - 200, obj_player3state)
     }
     if (instance_number(obj_player4state) &lt; 1)
     {
-        instance_create (96,800, obj_player4state)
+        instance_create (myWidth- 200,myHieght - 200, obj_player4state)
     }
 
     if (instance_number (obj_box) &lt; 20)
     {
-        xran = random_range(20,1580);
-        yran = random_range(20,880);
+        xran = random_range(300,myWidth - 300);
+        yran = random_range(300,myHieght - 300);
         instance_create(xran,yran, obj_box)
     }
 }

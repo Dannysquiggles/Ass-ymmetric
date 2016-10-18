@@ -2,10 +2,10 @@
 <sprite>
   <type>0</type>
   <xorig>48</xorig>
-  <yorigin>239</yorigin>
-  <colkind>0</colkind>
+  <yorigin>103</yorigin>
+  <colkind>1</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>-1</sepmasks>
+  <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>95</bbox_right>
@@ -23,5 +23,6 @@
     <frame index="0">images\spr_player4H_0.png</frame>
     <frame index="1">images\spr_player4H_1.png</frame>
     <frame index="2">images\spr_player4H_2.png</frame>
+    <frame index="3">images\spr_player4H_3.png</frame>
   </frames>
 </sprite>
