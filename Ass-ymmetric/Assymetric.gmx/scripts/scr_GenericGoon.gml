@@ -113,7 +113,7 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
         charge += 1;
         if charge > 90
         {
-            charge = 90
+            charge = 90;
         }
     }
     if ((charge = 20) && (spawn = 0))
@@ -124,9 +124,6 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
     if (charge = 80)
     {
         audio_play_sound(snd_ding_, 70, false);
-    }
-    if (charge = 85)
-    {
         audio_play_sound(snd_chargehum, 50, false);
     }
 }
