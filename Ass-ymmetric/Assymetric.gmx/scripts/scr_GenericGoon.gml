@@ -87,7 +87,7 @@ if (haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0)
 
 //if (gamepad_button_check_pressed(cont, gp_shoulderrb) && /*(shotcooldown <= 0)*/ (instance_number(bullet) = 0))then{
 //action_create_object_motion(bullet,x,y,bulletspeed, bulletdirection);
-if (gamepad_button_check(cont, gp_shoulderrb))
+if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
 {
     if charge = 0
     {
@@ -105,7 +105,7 @@ if (gamepad_button_check(cont, gp_shoulderrb))
     }
 }
 
-if (gamepad_button_check_released(cont, gp_shoulderrb))
+if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
 {
     if charge = 0
     {
@@ -114,12 +114,13 @@ if (gamepad_button_check_released(cont, gp_shoulderrb))
     
     if charge < 30
     {
-        
+        exit;
     }
     
-    if charge > 30
+    if charge > 60
     {
         action_create_object_motion(bulletID,x,y,bulletspeed, bulletdirection);
+        charge = 0;
     }
 }
 

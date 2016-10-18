@@ -32,6 +32,11 @@
     instance_create(x, y, obj_screenshake);
     audio_play_sound(snd_playerhit, 90, false);
 }
+
+with (obj_coins)
+{
+    
+}
 </string>
           </argument>
         </arguments>
