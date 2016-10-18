@@ -30,9 +30,10 @@ cont = 0;
 start = 0;
 bullet = obj_prebullet1;
 current_state = global.State;
-
 global.shotcooldown = 1;
 alarm[0] = 90;
+charge = 0;
+bulletID = obj_bullet1;
 </string>
           </argument>
         </arguments>
@@ -96,7 +97,6 @@ alarm[0] = 90;
             <kind>1</kind>
             <string>///change state
 current_state = global.State;
-{
 switch (current_state)
 {
     case states.hero1: scr_hero(); break;
@@ -118,7 +118,7 @@ else{
     image_yscale = 1;
         image_speed = 0.15;
 }
-}
+
 </string>
           </argument>
         </arguments>

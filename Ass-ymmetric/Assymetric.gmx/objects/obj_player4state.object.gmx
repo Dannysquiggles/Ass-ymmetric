@@ -32,6 +32,8 @@ bullet = obj_prebullet4;
 current_state = global.State;
 global.shotcooldown = 1;
 alarm[0] = 90;
+charge = 0;
+bulletID = obj_bullet4;
 </string>
           </argument>
         </arguments>

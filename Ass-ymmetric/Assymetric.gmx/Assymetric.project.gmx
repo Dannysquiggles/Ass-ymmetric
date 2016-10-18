@@ -12,6 +12,8 @@
     <sound>sound\snd_shatter</sound>
     <sound>sound\snd_timer</sound>
     <sound>sound\snd_playerhit2</sound>
+    <sound>sound\snd_chargeup1</sound>
+    <sound>sound\snd_ding_</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player1H</sprite>
@@ -72,10 +74,10 @@
     <object>objects\obj_bullet3</object>
     <object>objects\obj_bullet4</object>
     <objects name="players">
+      <object>objects\obj_player1</object>
+      <object>objects\obj_player2</object>
       <object>objects\obj_player3</object>
       <object>objects\obj_player4</object>
-      <object>objects\obj_player2</object>
-      <object>objects\obj_player1</object>
     </objects>
     <object>objects\obj_timer</object>
     <object>objects\obj_manager</object>

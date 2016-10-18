@@ -34,6 +34,8 @@ image_yscale = 1
 rot = random_range(1,90);
 
 image_angle = rot;
+
+
 </string>
           </argument>
         </arguments>

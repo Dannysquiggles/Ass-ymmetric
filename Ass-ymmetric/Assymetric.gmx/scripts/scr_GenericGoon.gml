@@ -8,6 +8,8 @@ image_xscale = 0.5;
 image_yscale = 0.5;
 
 Health = 50;
+spawn = 0;
+spawn2 = 0;
 
 gamepad_set_axis_deadzone(cont,0.2);
 
@@ -103,6 +105,16 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
             charge = 90
         }
     }
+    if ((charge = 20) && (spawn = 0))
+    {
+        audio_play_sound(snd_chargeup1, 10, false);
+        spawn = 1;
+    }
+    if (charge = 80)
+    {
+        audio_play_sound(snd_ding_, 70, false);
+        spawn2 = 1;
+    }
 }
 
 if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
@@ -117,9 +129,10 @@ if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxi
         exit;
     }
     
-    if charge > 60
+    if charge > 80
     {
         action_create_object_motion(bulletID,x,y,bulletspeed, bulletdirection);
+        audio_play_sound(snd_playerhit2, 100, false);
         charge = 0;
     }
 }
