@@ -30,11 +30,13 @@ randomize();
 draw_set_font(fnt_birlin);
 draw_set_halign(fa_center);
 
-myWidth = display_get_width();
-myHieght = display_get_height();
+myWidth = room_width;
+myHieght = room_height;
 
 view_hview[0] = myHieght;
 view_wview[0] = myWidth;
+view_hport[0] = myHieght;
+view_wport[0] = myWidth;
 
 global.bluecoins = 0;
 global.greencoins = 0;
