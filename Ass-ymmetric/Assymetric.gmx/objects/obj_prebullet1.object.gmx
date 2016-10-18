@@ -75,9 +75,6 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>image_angle = obj_player1state.image_angle - 90;
-
-x = obj_player1state.x
-y = obj_player1state.y
 </string>
           </argument>
         </arguments>

@@ -77,11 +77,13 @@ if (gamepad_axis_value(cont, gp_axislh) < 0||gamepad_axis_value(cont, gp_axislv)
     {
         image_xscale = 1;
         image_speed = 1;
+        buffer = 40;
     }
 else if (gamepad_axis_value(cont, gp_axislh) > 0||gamepad_axis_value(cont, gp_axislv) > 0) 
     {
         image_xscale = -1;
         image_speed = 1;
+        buffer = -40;
     }
 else
     {
@@ -94,7 +96,7 @@ shotcooldown = 0;
 //Aiming
 if (haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0)
 {
-    action_create_object_motion(bullet,x,y,bulletspeed, bulletdirection);
+    action_create_object_motion(bullet,x - buffer,y - 48,bulletspeed, bulletdirection);
 }
 //shoot a bullet
 
