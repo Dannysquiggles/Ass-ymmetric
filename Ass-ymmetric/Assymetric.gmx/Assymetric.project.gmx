@@ -65,11 +65,11 @@
       <object>objects\obj_player1state</object>
       <object>objects\obj_player2state</object>
       <object>objects\obj_player3state</object>
+      <object>objects\obj_player4state</object>
       <object>objects\obj_p1pointer</object>
       <object>objects\obj_p2pointer</object>
       <object>objects\obj_p3pointer</object>
       <object>objects\obj_p4pointer</object>
-      <object>objects\obj_player4state</object>
     </objects>
     <object>objects\obj_prebullet1</object>
     <object>objects\obj_prebullet2</object>

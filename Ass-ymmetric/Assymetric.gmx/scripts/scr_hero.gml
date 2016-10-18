@@ -111,7 +111,7 @@ bulletspeed = 0;
 shotcooldown = 0;
 //shoot a bullet
 
-if (gamepad_button_check_pressed(cont, gp_face1) && (global.shotcooldown <= 0))then{
+if (gamepad_button_check_pressed(cont, gp_shoulderrb) && (global.shotcooldown <= 0))then{
 action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
 move = key_left + key_right;
 hspeed = move * dashspeed;

@@ -1,6 +1,10 @@
+
 //select player
-x = player.x;
-y = player.y+40;
+if (instance_number(player) = 1)
+{
+    x = player.x;
+    y = player.y+40;
+}
 //initialise variables/states
 gamepad_set_axis_deadzone(cont,0.2);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
