@@ -137,13 +137,11 @@ switch (current_state)
 //pick sprite
 if (current_state == states.hero2){
     sprite_index = spr_player2H;
-    image_xscale = 1;
-    image_yscale = 1;
+
 }
 else{
     sprite_index = spr_player2G;
-    image_xscale = 1;
-    image_yscale = 1;
+
         image_speed = 0.15;
 }
 

@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>111</width>
+  <width>104</width>
   <height>119</height>
   <frames>
     <frame index="0">images\spr_player2G_0.png</frame>

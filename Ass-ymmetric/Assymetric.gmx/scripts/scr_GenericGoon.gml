@@ -73,7 +73,21 @@ vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 
 //facebullet
-image_angle = bulletdirection;
+if (gamepad_axis_value(cont, gp_axislh) < 0||gamepad_axis_value(cont, gp_axislv) < 0) 
+    {
+        image_xscale = 1;
+        image_speed = 1;
+    }
+else if (gamepad_axis_value(cont, gp_axislh) > 0||gamepad_axis_value(cont, gp_axislv) > 0) 
+    {
+        image_xscale = -1;
+        image_speed = 1;
+    }
+else
+    {
+        image_index = 0;
+        image_speed = 0;
+    }
 bulletspeed = 0;
 shotcooldown = 0;
 
