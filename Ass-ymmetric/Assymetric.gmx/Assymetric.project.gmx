@@ -18,10 +18,14 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player1H</sprite>
+    <sprite>sprites\spr_player1Hr</sprite>
     <sprite>sprites\spr_player2G</sprite>
     <sprite>sprites\spr_player2H</sprite>
+    <sprite>sprites\spr_player2Hr</sprite>
     <sprite>sprites\spr_player3H</sprite>
+    <sprite>sprites\spr_player3Hr</sprite>
     <sprite>sprites\spr_player4H</sprite>
+    <sprite>sprites\spr_Player4Hr</sprite>
     <sprite>sprites\spr_player1G</sprite>
     <sprite>sprites\spr_pointer</sprite>
     <sprites name="beam tezst">
@@ -69,9 +73,9 @@
     <object>objects\obj_heroattack</object>
     <objects name="players 1.2">
       <object>objects\obj_player1state</object>
+      <object>objects\obj_player4state</object>
       <object>objects\obj_player2state</object>
       <object>objects\obj_player3state</object>
-      <object>objects\obj_player4state</object>
       <object>objects\obj_p1pointer</object>
       <object>objects\obj_p2pointer</object>
       <object>objects\obj_p3pointer</object>

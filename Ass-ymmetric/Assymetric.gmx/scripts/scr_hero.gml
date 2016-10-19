@@ -23,7 +23,7 @@ key_down = (gamepad_axis_value(cont,gp_axislv) > 0);
 move = key_left + key_right;
 hspeed = move * movespeed;
 
-instance_create(x, y, obj_heroattack);
+//instance_create(x, y, obj_heroattack);
 
 moveV = key_up + key_down;
 vspeed = moveV * movespeed;
@@ -101,7 +101,7 @@ if (global.shield == 'false')
 */
 
 //initialise variables/states
-gamepad_set_axis_deadzone(cont,0.4);
+gamepad_set_axis_deadzone(cont,0.2);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 //define variables
 haxis = gamepad_axis_value(cont, gp_axisrh);
@@ -109,6 +109,22 @@ vaxis = gamepad_axis_value(cont, gp_axisrv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 bulletspeed = 0;
 shotcooldown = 0;
+
+//sprite direction
+if (gamepad_axis_value(cont, gp_axislh) <0)
+{
+sprite_index = sprite2
+image_xscale = -1;
+}
+else if (gamepad_axis_value(cont, gp_axislh) > 0)
+{
+sprite_index = sprite2
+image_xscale = 1;
+}
+else
+{
+sprite_index = sprite1
+}
 //shoot a bullet
 
 if (gamepad_button_check_pressed(cont, gp_shoulderrb) && (global.shotcooldown <= 0))then{

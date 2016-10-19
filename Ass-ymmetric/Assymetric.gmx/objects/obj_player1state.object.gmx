@@ -28,6 +28,8 @@
             <string>///assigne controller
 cont = 0;
 start = 0;
+sprite1 = spr_player1H;
+sprite2 = spr_player1Hr;
 bullet = obj_prebullet1;
 current_state = global.State;
 global.shotcooldown = 1;
@@ -123,7 +125,7 @@ switch (current_state)
 
 //pick sprite
 if (current_state == states.hero1){
-    sprite_index = spr_player1H;
+    //sprite_index = spr_player1H;
 }
 else{
     sprite_index = spr_player1G;
