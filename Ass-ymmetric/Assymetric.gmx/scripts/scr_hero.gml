@@ -56,7 +56,7 @@ y += vspeed;
 
 if (global.shield == 'false')
 {
-    if (place_meeting(x,y+vspeed,obj_bullet1))
+    if (place_meeting(x,y+vspeed,obj_b)||place_meeting(x,y+vspeed,obj_be))
     {
         global.State = states.hero1
         instance_destroy();

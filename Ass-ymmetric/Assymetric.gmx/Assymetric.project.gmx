@@ -61,6 +61,7 @@
     <script>scripts\scr_hero.gml</script>
     <script>scripts\scr_player_timeup.gml</script>
     <script>scripts\scr_pointer.gml</script>
+    <script>scripts\scr_beam.gml</script>
     <script>scripts\scr_GenericGoon.gml</script>
   </scripts>
   <fonts name="fonts">

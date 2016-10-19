@@ -70,7 +70,7 @@ else
 {
     global.State = states.hero4
 }
-global.Max = 15;
+global.Max = 20;
 </string>
           </argument>
         </arguments>
