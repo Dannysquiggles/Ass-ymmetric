@@ -24,6 +24,12 @@
     <sprite>sprites\spr_player4H</sprite>
     <sprite>sprites\spr_player1G</sprite>
     <sprite>sprites\spr_pointer</sprite>
+    <sprites name="beam tezst">
+      <sprite>sprites\spr_bs</sprite>
+      <sprite>sprites\spr_be</sprite>
+      <sprite>sprites\spr_b</sprite>
+      <sprite>sprites\obj_player</sprite>
+    </sprites>
     <sprite>sprites\spr_player3G</sprite>
     <sprite>sprites\spr_player4G</sprite>
     <sprite>sprites\spr_coins</sprite>
@@ -74,6 +80,12 @@
     <object>objects\obj_prebullet1</object>
     <object>objects\obj_prebullet2</object>
     <object>objects\obj_prebullet3</object>
+    <objects name="beam test">
+      <object>objects\obj_be</object>
+      <object>objects\obj_b</object>
+      <object>objects\obj_bs</object>
+      <object>objects\obj_bplayer</object>
+    </objects>
     <object>objects\obj_prebullet4</object>
     <object>objects\obj_bullet1</object>
     <object>objects\obj_bullet2</object>

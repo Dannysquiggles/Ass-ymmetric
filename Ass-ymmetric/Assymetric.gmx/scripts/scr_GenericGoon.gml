@@ -144,7 +144,7 @@ if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxi
     
     if charge > 80
     {
-        action_create_object_motion(bulletID,x,y,bulletspeed, bulletdirection);
+        action_create_object_motion(bulletID,x - buffer,y-48,bulletspeed, bulletdirection);
         audio_play_sound(snd_playerhit2, 100, false);
         charge = 0;
         audio_stop_sound(snd_chargehum);
