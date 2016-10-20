@@ -68,6 +68,7 @@ if (instance_number(flash) = 0)
         {
         instance_destroy();
         }
+        instance_destroy();
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);
     }
@@ -78,7 +79,7 @@ if (instance_number(flash) = 0)
         {
         instance_destroy();
         }
-    
+        instance_destroy();
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);
     }
@@ -89,7 +90,7 @@ if (instance_number(flash) = 0)
         {
         instance_destroy();
         }
-    
+        instance_destroy();
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);        
     }
@@ -100,7 +101,7 @@ if (instance_number(flash) = 0)
         {
         instance_destroy();
         }
-    
+        instance_destroy();
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);
     }   

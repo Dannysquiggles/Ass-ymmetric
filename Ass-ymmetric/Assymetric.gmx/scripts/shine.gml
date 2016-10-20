@@ -2,6 +2,7 @@
 ogx = player.x;
 ogy = player.y;
 //determine frame of anim
+
 if (image_index == 0)
 {
     x = ogx;
