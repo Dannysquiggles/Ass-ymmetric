@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>986908</colour>
+  <colour>1184278</colour>
   <showcolour>-1</showcolour>
   <code>randomize();
 
@@ -62,18 +62,18 @@ enum states
   <instances>
     <instance objName="obj_manager" x="768" y="416" name="inst_5A955262" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_timer" x="448" y="192" name="inst_CDAC8351" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="96" y="544" name="inst_A2404E05" locked="0" code="" scaleX="0.25" scaleY="7" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="1664" y="544" name="inst_5A74FEB6" locked="0" code="" scaleX="0.25" scaleY="7" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="896" y="96" name="inst_51A83C6E" locked="0" code="" scaleX="12" scaleY="0.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="896" y="1024" name="inst_07162D15" locked="0" code="" scaleX="12" scaleY="0.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="117" y="552" name="inst_A2404E05" locked="0" code="" scaleX="0.25" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1678" y="547" name="inst_5A74FEB6" locked="0" code="" scaleX="0.25" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_screenshake" x="160" y="128" name="inst_23EDA5CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="736" y="576" name="inst_0980ACE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="800" y="576" name="inst_156407D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="864" y="576" name="inst_33DE327F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_coins" x="1152" y="480" name="inst_90869E7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wallv" x="886" y="88" name="inst_859ED926" locked="0" code="" scaleX="12.1875" scaleY="-0.4375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wallv" x="937" y="1033" name="inst_EE725A04" locked="0" code="" scaleX="12.1875" scaleY="-0.4375" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
-    <tile bgName="background0" x="128" y="96" w="1540" h="891" xo="0" yo="0" id="10000004" name="inst_E7D4E1C5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="122" y="116" w="1540" h="891" xo="0" yo="0" id="10000004" name="inst_E7D4E1C5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bk_player2" x="1376" y="0" w="396" h="169" xo="0" yo="0" id="10000011" name="inst_59608B7D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="_bk_player3" x="32" y="896" w="396" h="169" xo="0" yo="0" id="10000017" name="inst_B7BC5E6F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background1" x="32" y="0" w="396" h="169" xo="0" yo="0" id="10000018" name="inst_9EAAE535" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

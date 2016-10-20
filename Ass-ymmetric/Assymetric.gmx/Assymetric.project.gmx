@@ -105,6 +105,7 @@
     <object>objects\obj_timer</object>
     <object>objects\obj_manager</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_wallv</object>
     <object>objects\obj_box</object>
     <object>objects\obj_screenshake</object>
   </objects>

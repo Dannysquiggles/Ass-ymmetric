@@ -42,9 +42,9 @@ if (place_meeting(x+hspeed,y,obj_wall))
 x += hspeed;
 
 // verticle collision
-if (place_meeting(x,y+vspeed,obj_wall))
+if (place_meeting(x,(y + 100)+vspeed,obj_wallv))
 {
-    while(!place_meeting(x,y+sign(vspeed),obj_wall))
+    while(!place_meeting(x,(y + 100 )+sign(vspeed),obj_wallv))
     {
         y += sign(vspeed);
     }

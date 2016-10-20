@@ -34,6 +34,8 @@ green = make_colour_rgb(3,255,0);
 yellow = make_colour_rgb(251,255,0);
 purple = make_colour_rgb(255,0,196);
 
+alarm[0] = 120;
+
 myWidth = room_width;
 myHieght = room_height;
 
@@ -70,7 +72,37 @@ else
 {
     global.State = states.hero4
 }
-global.Max = 20;
+global.Max = 30;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///respawn boxes
+if (instance_number (obj_box) &lt; 10)
+    {
+        xran = random_range(300,myWidth - 300);
+        yran = random_range(300,myHieght - 300);
+        instance_create(xran,yran, obj_box)
+    }
+alarm[0] = 130;
 </string>
           </argument>
         </arguments>
@@ -139,8 +171,7 @@ else
         instance_create (myWidth- 200,myHieght - 200, obj_player4state)
         instance_create (200,200, obj_p4pointer)
     }
-
-    if (instance_number (obj_box) &lt; 20)
+    if (instance_number (obj_box) &lt; 10)
     {
         xran = random_range(300,myWidth - 300);
         yran = random_range(300,myHieght - 300);

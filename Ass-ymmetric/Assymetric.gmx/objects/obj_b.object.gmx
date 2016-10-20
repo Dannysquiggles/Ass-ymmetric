@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>image_angle = obj_p1pointer.image_angle;
 angleInRadians = degtorad(image_angle + 90);
-offset = 30;
+offset = 60;
 collide = 'false';
-alarm[1] = 15;
+alarm[1] = 60;
 alarm[0] = 1;
 </string>
           </argument>
