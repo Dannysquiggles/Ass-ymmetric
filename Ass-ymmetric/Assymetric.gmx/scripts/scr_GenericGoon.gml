@@ -106,6 +106,7 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
 {
     if charge = 0
     {
+        action_create_object(chargesh,x-buffer,y-48)
         charge = 1;
         //action_create_object_motion(bulletID,x,y,bulletspeed, bulletdirection);
     }
@@ -132,6 +133,10 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
 
 if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
 {
+    with (chargesh)
+    {
+        instance_destroy()
+    }
     if charge = 0
     {
         exit;

@@ -28,10 +28,20 @@
     <sprite>sprites\spr_Player4Hr</sprite>
     <sprite>sprites\spr_player1G</sprite>
     <sprite>sprites\spr_pointer</sprite>
-    <sprites name="beam tezst">
-      <sprite>sprites\spr_bs</sprite>
-      <sprite>sprites\spr_be</sprite>
-      <sprite>sprites\spr_b</sprite>
+    <sprites name="beam">
+      <sprite>sprites\spr_bsb</sprite>
+      <sprite>sprites\spr_white</sprite>
+      <sprite>sprites\spr_bsy</sprite>
+      <sprite>sprites\spr_bsg</sprite>
+      <sprite>sprites\spr_bsp</sprite>
+      <sprite>sprites\spr_beb</sprite>
+      <sprite>sprites\spr_beg</sprite>
+      <sprite>sprites\spr_bep</sprite>
+      <sprite>sprites\spr_bey</sprite>
+      <sprite>sprites\spr_bb</sprite>
+      <sprite>sprites\spr_bg</sprite>
+      <sprite>sprites\spr_bp</sprite>
+      <sprite>sprites\spr_by</sprite>
       <sprite>sprites\obj_player</sprite>
     </sprites>
     <sprite>sprites\spr_player3G</sprite>
@@ -87,9 +97,21 @@
     <object>objects\obj_prebullet3</object>
     <objects name="beam test">
       <object>objects\obj_be</object>
+      <object>objects\obj_bey</object>
+      <object>objects\obj_bep</object>
+      <object>objects\obj_beg</object>
       <object>objects\obj_b</object>
+      <object>objects\obj_by</object>
+      <object>objects\obj_bp</object>
+      <object>objects\obj_bg</object>
       <object>objects\obj_bs</object>
-      <object>objects\obj_bplayer</object>
+      <object>objects\obj_bsy</object>
+      <object>objects\obj_bsp</object>
+      <object>objects\obj_bsg</object>
+      <object>objects\obj_cb</object>
+      <object>objects\obj_cg</object>
+      <object>objects\obj_cp</object>
+      <object>objects\obj_cy</object>
     </objects>
     <object>objects\obj_prebullet4</object>
     <object>objects\obj_bullet1</object>
