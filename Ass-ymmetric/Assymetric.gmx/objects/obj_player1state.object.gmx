@@ -38,6 +38,8 @@ charge = 0;
 bulletID = obj_bs;
 buffer = 40;
 chargesh = obj_cb;
+flash = obj_f1;
+flashed = 0;
 
 </string>
           </argument>

@@ -1,4 +1,9 @@
 ///initialise variables
+if flashed = 0
+{
+instance_create(x,y,flash)
+flashed = 1;
+}
 hspeed = 0;
 vspeed = 0;
 jumpspeed = 7;
@@ -54,6 +59,8 @@ y += vspeed;
 
 if (global.shield == 'false')
 {
+if (instance_number(flash) = 0)
+{
     if (place_meeting(x,y+vspeed,obj_b)||place_meeting(x,y+vspeed,obj_be)) && (!global.State == states.hero1)
     {
         global.State = states.hero1
@@ -97,6 +104,7 @@ if (global.shield == 'false')
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);
     }   
+}
 }
 ///attacke
 ///melee attack
