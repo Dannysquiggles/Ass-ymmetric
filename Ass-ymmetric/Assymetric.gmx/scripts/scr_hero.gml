@@ -11,7 +11,6 @@ spawn = 0;
 
 gamepad_set_axis_deadzone(cont,0.2);
 
-///move and collide.
 
 // get players input
 key_right = (gamepad_axis_value(cont,gp_axislh) > 0);
@@ -23,7 +22,6 @@ key_down = (gamepad_axis_value(cont,gp_axislv) > 0);
 move = key_left + key_right;
 hspeed = move * movespeed;
 
-//instance_create(x, y, obj_heroattack);
 
 moveV = key_up + key_down;
 vspeed = moveV * movespeed;
@@ -56,34 +54,45 @@ y += vspeed;
 
 if (global.shield == 'false')
 {
-    if (place_meeting(x,y+vspeed,obj_b)||place_meeting(x,y+vspeed,obj_be))
+    if (place_meeting(x,y+vspeed,obj_b)||place_meeting(x,y+vspeed,obj_be)) && (!global.State == states.hero1)
     {
         global.State = states.hero1
+        with (obj_b)
+        {
         instance_destroy();
+        }
+        instance_create(x, y, obj_screenshake);
+        audio_play_sound(snd_shatter, 50, false);
+    }
+    if (place_meeting(x,y+vspeed,obj_bg)||place_meeting(x,y+vspeed,obj_beg))
+    {
+        global.State = states.hero2
+         with (obj_bg)
+        {
+        instance_destroy();
+        }
     
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);
     }
-    if (place_meeting(x,y+vspeed,obj_bullet2))
-    {
-        global.State = states.hero2;
+    if (place_meeting(x,y+vspeed,obj_bp)||place_meeting(x,y+vspeed,obj_bep))
+    {        
+        global.State = states.hero3
+         with (obj_bp)
+        {
         instance_destroy();
+        }
     
         instance_create(x, y, obj_screenshake);
-        audio_play_sound(snd_shatter, 50, false);
+        audio_play_sound(snd_shatter, 50, false);        
     }
-    if (place_meeting(x,y+vspeed,obj_bullet3))
+    if (place_meeting(x,y+vspeed,obj_by)||place_meeting(x,y+vspeed,obj_bey))
     {
-        global.State = states.hero3;
+        global.State = states.hero4
+         with (obj_by)
+        {
         instance_destroy();
-    
-        instance_create(x, y, obj_screenshake);
-        audio_play_sound(snd_shatter, 50, false);
-    }
-    if (place_meeting(x,y+vspeed,obj_bullet4))
-    {
-        global.State = states.hero4;
-        instance_destroy();
+        }
     
         instance_create(x, y, obj_screenshake);
         audio_play_sound(snd_shatter, 50, false);
@@ -104,8 +113,8 @@ if (global.shield == 'false')
 gamepad_set_axis_deadzone(cont,0.2);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 //define variables
-haxis = gamepad_axis_value(cont, gp_axisrh);
-vaxis = gamepad_axis_value(cont, gp_axisrv);
+haxis = gamepad_axis_value(cont, gp_axislh);
+vaxis = gamepad_axis_value(cont, gp_axislv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 bulletspeed = 0;
 shotcooldown = 0;
@@ -127,7 +136,7 @@ sprite_index = sprite1
 }
 //shoot a bullet
 
-if (gamepad_button_check_pressed(cont, gp_shoulderrb) && (global.shotcooldown <= 0))then{
+if (gamepad_button_check_pressed(cont, gp_face1) && (global.shotcooldown <= 0))then{
 action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
 move = key_left + key_right;
 hspeed = move * dashspeed;

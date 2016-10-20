@@ -8,21 +8,21 @@ if (global.State == states.hero1)
     collide = 'true';
     }
 }
-else if (global.State == states.hero2)
+if (global.State == states.hero2)
 {
     if(place_meeting(x,y,obj_player2state))
     {
     collide = 'true';
     }
 }
-else if (global.State == states.hero3)
+if (global.State == states.hero3)
 {
     if(place_meeting(x,y,obj_player3state))
     {
     collide = 'true';
     }
 }
-else
+if (global.State == states.hero4)
 {
     if(place_meeting(x,y,obj_player4state))
     {

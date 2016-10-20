@@ -36,7 +36,7 @@ global.shotcooldown = 1;
 alarm[0] = 90;
 charge = 0;
 bulletID = obj_bsg;
-buffer = -40;
+buffer = 40;
 chargesh = obj_cg;
 </string>
           </argument>

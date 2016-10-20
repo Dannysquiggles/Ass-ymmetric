@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = obj_p4pointer.image_angle;
+            <string>image_angle = obj_bsy.image_angle;
 angleInRadians = degtorad(image_angle + 90);
 offset = 60;
 collide = 'false';

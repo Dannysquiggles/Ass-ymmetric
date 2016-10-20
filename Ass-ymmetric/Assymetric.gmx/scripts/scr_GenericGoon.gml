@@ -3,6 +3,7 @@ hspeed = 0;
 vspeed = 0;
 jumpspeed = 7;
 movespeed = 2;
+movespeed2 = 0.5;
 
 Health = 50;
 spawn = 0;
@@ -19,11 +20,22 @@ key_up = -((gamepad_axis_value(cont,gp_axislv) < 0));
 key_down = (gamepad_axis_value(cont,gp_axislv) > 0);
 
 //react to inputs move.
+if (!gamepad_button_check(cont, gp_face1))
+{
 move = key_left + key_right;
 hspeed = move * movespeed;
 
 moveV = key_up + key_down;
 vspeed = moveV * movespeed;
+}
+else
+{
+move = key_left + key_right;
+hspeed = move * movespeed2;
+
+moveV = key_up + key_down;
+vspeed = moveV * movespeed2;
+}
 
 //death
 /*if (Health <= 0)
@@ -68,27 +80,29 @@ if (place_meeting(x+hspeed,y,obj_heroattack))
 gamepad_set_axis_deadzone(cont,0.2);
 var haxis,vaxis,bulletspeed,bulletdirection,shotcooldown;
 //define variables
-haxis = gamepad_axis_value(cont, gp_axisrh);
-vaxis = gamepad_axis_value(cont, gp_axisrv);
+haxis = gamepad_axis_value(cont, gp_axislh);
+vaxis = gamepad_axis_value(cont, gp_axislv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 
 //facebullet
-if (gamepad_axis_value(cont, gp_axislh) < 0||gamepad_axis_value(cont, gp_axislv) < 0) 
+if (gamepad_axis_value(cont, gp_axislh) < 0)
     {
         image_xscale = 1;
-        image_speed = 1;
         buffer = 40;
     }
-else if (gamepad_axis_value(cont, gp_axislh) > 0||gamepad_axis_value(cont, gp_axislv) > 0) 
+else if (gamepad_axis_value(cont, gp_axislh) > 0)
     {
         image_xscale = -1;
-        image_speed = 1;
         buffer = -40;
+    }
+if (gamepad_axis_value(cont, gp_axislh) > 0)||(gamepad_axis_value(cont, gp_axislh) < 0)||(gamepad_axis_value(cont, gp_axislv) < 0)||(gamepad_axis_value(cont, gp_axislv) > 0)
+    {
+        image_speed = 1;
     }
 else
     {
-        image_index = 0;
-        image_speed = 0;
+    image_index = 0;
+    image_speed = 0;
     }
 bulletspeed = 0;
 shotcooldown = 0;
@@ -102,7 +116,7 @@ if (haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0)
 
 //if (gamepad_button_check_pressed(cont, gp_shoulderrb) && /*(shotcooldown <= 0)*/ (instance_number(bullet) = 0))then{
 //action_create_object_motion(bullet,x,y,bulletspeed, bulletdirection);
-if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
+if (gamepad_button_check(cont, gp_face1)) //&& ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
 {
     if charge = 0
     {
@@ -131,19 +145,23 @@ if (gamepad_button_check(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) ||
     }
 }
 
-if (gamepad_button_check_released(cont, gp_shoulderrb)) && ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
+if (gamepad_button_check_released(cont, gp_face1)) //&& ((haxis > 0) || (haxis < 0) || (vaxis > 0) || (vaxis < 0))
 {
-    with (chargesh)
-    {
-        instance_destroy()
-    }
+
+        with (chargesh)
+            {
+            instance_destroy()
+            }
     if charge = 0
     {
+        charge = 0;
         exit;
     }
     
-    if charge < 30
+    if charge > 20 && charge < 80
     {
+        audio_stop_sound(snd_chargeup1);
+        charge = 0;
         exit;
     }
     
