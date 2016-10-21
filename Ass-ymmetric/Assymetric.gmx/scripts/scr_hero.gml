@@ -3,7 +3,6 @@ depth = -y-2;
 if flashed = 0
 {
 instance_create(x,y,flash)
-instance_create(x,y,hero_glow)
 flashed = 1;
 }
 hspeed = 0;
@@ -129,7 +128,10 @@ vaxis = gamepad_axis_value(cont, gp_axislv);
 bulletdirection = point_direction(0, 0, haxis, vaxis);
 bulletspeed = 0;
 shotcooldown = 0;
-
+if (global.shotcooldown == 0) && (instance_number(hero_glow) == 0)
+{
+    instance_create(x,y,hero_glow)
+}
 //sprite direction
 if (gamepad_axis_value(cont, gp_axislh) <0)
 {
@@ -161,6 +163,10 @@ vspeed = moveV * dashspeed;
 audio_play_sound(snd_laser, 80, false);
 alarm[0] = 90;
 global.shotcooldown = 1;
+with (hero_glow)
+{
+    instance_destroy();
+}
 }
 
 
