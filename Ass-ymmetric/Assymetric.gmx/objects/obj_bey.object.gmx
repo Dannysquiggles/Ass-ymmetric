@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = obj_p4pointer.image_angle;
+            <string>depth = -y-4;
+image_angle = obj_p4pointer.image_angle;
 alarm[1] = 60;
 </string>
           </argument>

@@ -8,6 +8,7 @@ movespeed2 = 0.5;
 Health = 50;
 spawn = 0;
 spawn2 = 0;
+depth = -y -1;
 
 gamepad_set_axis_deadzone(cont,0.2);
 

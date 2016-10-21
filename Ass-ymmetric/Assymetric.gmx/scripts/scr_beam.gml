@@ -1,5 +1,6 @@
 ///beams colliding
 //image_xscale = image_xscale * -1;
+depth = -y-3;
 image_speed = 0.25;
 if (global.State == states.hero1)
 {

@@ -1,4 +1,5 @@
 ///initialise variables
+depth = -y-2;
 if flashed = 0
 {
 instance_create(x,y,flash)

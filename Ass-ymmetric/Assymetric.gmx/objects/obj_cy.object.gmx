@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = 0;
+            <string>depth = -y-9;
+image_xscale = 0;
 image_yscale = 0;
 </string>
           </argument>

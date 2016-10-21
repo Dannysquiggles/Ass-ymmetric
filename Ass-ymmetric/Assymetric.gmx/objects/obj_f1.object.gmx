@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.State == states.hero1)
+            <string>depth = -y-4;
+if(global.State == states.hero1)
 {
 player = obj_player1state;
 sprite_index = spr_blueflash;
