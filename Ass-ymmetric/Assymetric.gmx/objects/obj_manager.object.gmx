@@ -33,6 +33,7 @@ blue = make_colour_rgb(0,230,254);
 green = make_colour_rgb(3,255,0);
 yellow = make_colour_rgb(251,255,0);
 purple = make_colour_rgb(255,0,196);
+global.dir = 1;
 
 alarm[0] = 120;
 

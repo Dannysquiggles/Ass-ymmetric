@@ -53,7 +53,7 @@ image_yscale = 0;
             <string>///rotate &amp; grow.
 x = obj_player3state.x - obj_player3state.buffer;
 y = obj_player3state.y -48;
-
+depth = -y - 50;
 image_angle += 5;
 
 if (image_xscale &lt; 1)

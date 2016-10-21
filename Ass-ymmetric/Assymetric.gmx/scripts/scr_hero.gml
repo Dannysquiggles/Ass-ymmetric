@@ -146,7 +146,6 @@ global.dir = 1;
 else
 {
 sprite_index = sprite1
-global.dir = 1;
 }
 global.im = image_index;
 global.sprite = sprite_index;

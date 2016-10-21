@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y-9;
+            <string>depth = -y - 50;
 image_xscale = 0;
 image_yscale = 0;
 </string>
@@ -53,7 +53,7 @@ image_yscale = 0;
             <string>///rotate &amp; grow.
 x = obj_player1state.x - obj_player1state.buffer;
 y = obj_player1state.y -48;
-
+depth = -y - 50;
 image_angle += 5;
 
 if (image_xscale &lt; 1)
