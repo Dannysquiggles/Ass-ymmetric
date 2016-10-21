@@ -164,6 +164,7 @@ audio_play_sound(snd_laser, 80, false);
 var dash = instance_create(x, y, obj_dasheffect);
 dash.sprite_index = sprite_index;
 dash.image_index = image_index;
+dash.image_xscale = global.dir;
 alarm[0] = 90;
 global.shotcooldown = 1;
 with (hero_glow)
