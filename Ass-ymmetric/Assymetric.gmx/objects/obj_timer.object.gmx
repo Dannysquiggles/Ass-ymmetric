@@ -65,7 +65,7 @@ else
 global.State = states.timeup
 }
 
-if (time &lt;= 10)
+if (time = 10)
 {
     audio_play_sound(snd_timer, 50, true);
 }

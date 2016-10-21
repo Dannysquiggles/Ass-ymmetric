@@ -44,11 +44,21 @@ vspeed = moveV * movespeed2;
 }
 */
 
+//Horizontal box collision
+if (place_meeting(x+hspeed,y,obj_box))
+{
+    while(!place_meeting(x+sign(hspeed),y,obj_box)) 
+    {
+       x += sign(hspeed);
+    }
+    hspeed = 0;
+}
+
 // horizontal collision
 
-if (place_meeting(x+hspeed,y,obj_wall))
+if (place_meeting(x+hspeed,y,obj_wall)) 
 {
-    while(!place_meeting(x+sign(hspeed),y,obj_wall))
+    while(!place_meeting(x+sign(hspeed),y,obj_wall)) 
     {
        x += sign(hspeed);
     }
@@ -56,7 +66,17 @@ if (place_meeting(x+hspeed,y,obj_wall))
 }
 x += hspeed;
 
-// verticle collision
+//Vertical box collision
+if (place_meeting(x,y+vspeed,obj_box))
+{
+    while(!place_meeting(x,y+sign(vspeed),obj_box))
+    {
+        y += sign(vspeed);
+    }
+    vspeed = 0;
+}
+
+// vertical collision
 if (place_meeting(x,y+vspeed,obj_wallv))
 {
     while(!place_meeting(x,y+sign(vspeed),obj_wallv))

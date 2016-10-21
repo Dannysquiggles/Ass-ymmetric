@@ -37,5 +37,9 @@ if (place_meeting(x,y,obj_wallv))
 {
 collide = 'true';
 }
+if (place_meeting(x,y,obj_box))
+{
+    collide = 'true';
+}
 
 
