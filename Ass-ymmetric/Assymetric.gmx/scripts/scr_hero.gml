@@ -151,7 +151,7 @@ sprite_index = sprite1
 }
 global.im = image_index;
 global.sprite = sprite_index;
-//shoot a bullet
+///Dash
 
 if (gamepad_button_check_pressed(cont, gp_face1) && (global.shotcooldown <= 0))then{
 action_create_object_motion(obj_heroattack,x,y,bulletspeed,bulletdirection);
@@ -161,6 +161,9 @@ hspeed = move * dashspeed;
 moveV = key_up + key_down;
 vspeed = moveV * dashspeed;
 audio_play_sound(snd_laser, 80, false);
+var dash = instance_create(x, y, obj_dasheffect);
+dash.sprite_index = sprite_index;
+dash.image_index = image_index;
 alarm[0] = 90;
 global.shotcooldown = 1;
 with (hero_glow)
