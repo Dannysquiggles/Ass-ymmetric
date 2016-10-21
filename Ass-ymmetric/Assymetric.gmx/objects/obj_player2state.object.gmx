@@ -129,7 +129,10 @@ switch (current_state)
 
 //pick sprite
 if (current_state == states.hero2){
-    //sprite_index = spr_player2H;
+        with (obj_cg)
+    {
+        instance_destroy();
+    }
 
 }
 else{
