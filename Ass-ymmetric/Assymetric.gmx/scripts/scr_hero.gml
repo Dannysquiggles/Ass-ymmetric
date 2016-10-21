@@ -2,6 +2,7 @@
 if flashed = 0
 {
 instance_create(x,y,flash)
+instance_create(x,y,hero_glow)
 flashed = 1;
 }
 hspeed = 0;
@@ -133,16 +134,21 @@ if (gamepad_axis_value(cont, gp_axislh) <0)
 {
 sprite_index = sprite2
 image_xscale = -1;
+global.dir = -1;
 }
 else if (gamepad_axis_value(cont, gp_axislh) > 0)
 {
 sprite_index = sprite2
 image_xscale = 1;
+global.dir = 1;
 }
 else
 {
 sprite_index = sprite1
+global.dir = 1;
 }
+global.im = image_index;
+global.sprite = sprite_index;
 //shoot a bullet
 
 if (gamepad_button_check_pressed(cont, gp_face1) && (global.shotcooldown <= 0))then{

@@ -78,6 +78,7 @@
     <script>scripts\scr_beam.gml</script>
     <script>scripts\scr_GenericGoon.gml</script>
     <script>scripts\shine.gml</script>
+    <script>scripts\scr_ground.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_birlin</font>
@@ -95,6 +96,7 @@
       <object>objects\obj_p1pointer</object>
       <object>objects\obj_p2pointer</object>
       <object>objects\obj_p3pointer</object>
+      <object>objects\hero_glow</object>
       <object>objects\obj_p4pointer</object>
     </objects>
     <object>objects\obj_f1</object>
